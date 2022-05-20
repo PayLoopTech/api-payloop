@@ -1,0 +1,2 @@
+# Instant Payment Gateway API
+The following methods are used to empower your service with PayLoop Payment Gateway features. You can request more features by contacting our developers team. PayLoop API is a white-label payment solution.
