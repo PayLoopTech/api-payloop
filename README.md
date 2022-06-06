@@ -54,11 +54,19 @@ Here is a small guide how to properly sign transaction with postman:
 
 1. Add new environment.
 
-![New Environment](/images/newEnviroment.png "New Environment")
+![New Environment](/images/newEnvironment.png "New Environment")
 
 2. Add ```accessToken``` variable to the new environment.
+
+![New Environment](/images/addVariable.png "New Environment")
+
 3. Create new request. Being on the ```Headers``` tab add ```accessToken``` header. Use postman variable syntax for them in ```Value``` column. These variables will be updated for each request using the pre-request script.
+
+![New Environment](/images/addHeader.png "New Environment")
+
 4. Paste the following code to the ```Pre-request Script``` tab for the request. Fill up the apiKey and secret variables. Be very careful not to accidentally share your secret.
+
+![New Environment](/images/addRequestScript.png "New Environment")
 
 ```JavaScript
   const apiKey = "<API-KEY>";
