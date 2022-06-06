@@ -34,6 +34,7 @@ Example response:
 Id used is a custom ID generated at the client side to distinguish responses. You may use any value you want.
 
 ### Authentication
+Authentication URL: ``` https://developer.payloop.tech/api/live/mpesa/generate/client_credentials ```
 All requests must contain the following headers:
 | Header      | Description |
 | ----------- | ----------- |
@@ -119,7 +120,7 @@ Example request:
     "phoneNo":"254721000111",
     "amount":1,
     "resultURL":"<RESULT-URL>",
-    "queueTimeOutURL":"TIMEOUT-URL"
+    "queueTimeOutURL":"<TIMEOUT-URL>"
 }
 ```
 Example response:
