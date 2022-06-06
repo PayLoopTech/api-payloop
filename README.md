@@ -80,6 +80,7 @@ Here is a small guide how to properly sign transaction with postman:
 Deposit URL: ``` https://developer.payloop.tech/api/live/mpesa/deposit ```
 | Property      | Description |
 | ----------- | ----------- |
+| id      | Transaction ID. Could be used in getStatus method      |
 | phoneNo      | This is the phone number initiating the C2B transaction.      |
 | amount      | This is the amount being transacted. The parameter expected is a numeric value.       |
 | callBackURL      | 	This is the URL to be specified in your request that will be used by PayLoop to send notification upon processing of the payment request.      |
@@ -105,6 +106,7 @@ Example response:
 Deposit URL: ``` https://developer.payloop.tech/api/live/mpesa/withdraw ```
 | Property      | Description |
 | ----------- | ----------- |
+| id      | Transaction ID. Could be used in getStatus method      |
 | phoneNo      | This is the phone number initiating the C2B transaction.      |
 | amount      | This is the amount being transacted. The parameter expected is a numeric value.       |
 | resultURL      | 	This is the URL to be specified in your request that will be used by PayLoop to send notification upon processing of the payment request.      |
