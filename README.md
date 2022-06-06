@@ -7,6 +7,7 @@ The following methods are used to empower your service with PayLoop Payment Gate
 3. Open an issue if you have any questions;
 
 API URL: ``` https://developer.payloop.tech ```
+Enviroments for making requests: ``` test ``` or  ``` live ``` 
 
 ### Protocol
 PayLoop API uses JSON-RPC 2.0 protocol.
@@ -64,6 +65,7 @@ Here is a small guide how to properly sign transaction with postman:
   postman.setEnvironmentVariable("accessToken", accessToken);
 ```
 ### Deposit Request
+Deposit URL: ``` https://developer.payloop.tech/api/live/mpesa/deposit ```
 | Property      | Description |
 | ----------- | ----------- |
 | phoneNo      | This is the phone number initiating the C2B transaction.      |
@@ -73,8 +75,79 @@ Here is a small guide how to properly sign transaction with postman:
 Example request:
 ```JSON
 {
+    "id": "test",
     "phoneNo":"254721000111",
     "amount":1,
     "callBackURL":"http://developer.payloop.tech/api/live/withdraw/mpesa/response"
 }
 ```
+Example response:
+```JSON
+{
+    "isSuccessful": true,
+    "msg":"The service request is processed successfully."
+}
+```
+
+### Withdraw Request
+Deposit URL: ``` https://developer.payloop.tech/api/live/mpesa/withdraw ```
+| Property      | Description |
+| ----------- | ----------- |
+| phoneNo      | This is the phone number initiating the C2B transaction.      |
+| amount      | This is the amount being transacted. The parameter expected is a numeric value.       |
+| resultURL      | 	This is the URL to be specified in your request that will be used by PayLoop to send notification upon processing of the payment request.      |
+| queueTimeOutURL      | 	This is the URL to be specified in your request that will be used by API Proxy to send notification incase the payment request is timed out while awaiting processing in the queue.     |
+
+Example request:
+```JSON
+{
+    "id": "test",
+    "phoneNo":"254721000111",
+    "amount":1,
+    "resultURL":"<RESULT-URL>",
+    "queueTimeOutURL":"TIMEOUT-URL"
+}
+```
+Example response:
+```JSON
+{
+    "isSuccessful": true,
+    "msg":"Withdraw request sent successfully"
+}
+```
+### Balance Request
+Deposit URL: ``` https://developer.payloop.tech/api/business/balance ```
+
+Example request:
+```JSON
+{}
+```
+Example response:
+```JSON
+{
+    "isSuccessful": true,
+    "balance":24600
+}
+```
+
+### Transacrtion History Request
+Deposit URL: ``` https://developer.payloop.tech/api/business/transactions/history ```
+
+Example request:
+```JSON
+{}
+```
+Example response:
+```JSON
+{
+    "isSuccessful": true,
+    "transactions":{}
+}
+```
+
+
+### Support
+Dedicated Support Line
+
+Inform us in case a dedicated support line is needed. Feel free to request it at support@payloop.tech.
+- You provide the first line support from your side and send your tickets directly to our dedicated email address. These tickets are forwarded strictly to our second level support team. It will be assigned the highest priority. Please don't make our email public.
