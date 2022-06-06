@@ -69,6 +69,7 @@ Here is a small guide how to properly sign transaction with postman:
 | phoneNo      | This is the phone number initiating the C2B transaction.      |
 | amount      | This is the amount being transacted. The parameter expected is a numeric value.       |
 | callBackURL      | 	This is the URL to be specified in your request that will be used by PayLoop to send notification upon processing of the payment request.      |
+
 Example request:
 ```JSON
 {
