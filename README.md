@@ -2,13 +2,13 @@
 The following methods are used to empower your service with PayLoop Payment Gateway features. You can request more features by contacting our developers team. PayLoop API is a white-label payment solution.
 
 ## Getting started
-1. Contact us at pro@changelly.com to get the API keys;
+1. Contact us at support.payloop.tech to get the API keys;
 2. Read the following documentation;
 3. Open an issue if you have any questions;
 
 API URL: ``` https://developer.payloop.tech ```
 
-## Protocol
+### Protocol
 PayLoop API uses JSON-RPC 2.0 protocol.
 
 Example request:
@@ -31,14 +31,23 @@ Example response:
 
 Id used is a custom ID generated at the client side to distinguish responses. You may use any value you want.
 
-## Authentication
+### Authentication
 All requests must contain the following headers:
 | Header      | Description |
 | ----------- | ----------- |
 | accessToken      | your access token       |
 
+### Node.js authentication
+Example of how to get access token:
+```JavaScript
+  const apiKey = "<API-KEY>";
+  const secret = "<SECRET>";
 
-## Postman authentication
+  const accessToken = Buffer.from(`${apiKey}:${secret}`).toString('base64');
+
+```
+
+### Postman authentication
 Here is a small guide how to properly sign transaction with postman:
 
 1. Add new environment.
