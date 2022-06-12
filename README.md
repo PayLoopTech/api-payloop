@@ -12,7 +12,7 @@ API URL: ``` https://developer.payloop.tech ```
 PayLoop API uses JSON-RPC 2.0 protocol.
 
 Example request:
-```r
+```JavaScript
 {
    "id": "test",
    "method": "deposit",
@@ -22,7 +22,7 @@ Example request:
 ```
 
 Example response:
-```r
+```JavaScript
 {
    "isSuccessful": true,
    "msg": 'The service request is processed successfully.'
